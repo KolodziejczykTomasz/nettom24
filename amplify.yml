@@ -16,3 +16,10 @@ frontend:
         - nvm use $VERSION_NODE_16
         - node -v
         - npm run-script build
+  artifacts:
+    baseDirectory: build
+    files:
+      - "**/*"
+    cache:
+      paths:
+        - node_modules/**/*
