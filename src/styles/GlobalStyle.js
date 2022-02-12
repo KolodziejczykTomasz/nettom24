@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-color: #262626;
+    background-color: rgb(33, 42, 57);
   }
 
 `

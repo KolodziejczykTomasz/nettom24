@@ -1,16 +1,50 @@
-import { FaFacebook } from 'react-icons/fa';
+import React from 'react'
+import { TiSocialFacebookCircular, TiMail, TiLocationOutline, TiDevicePhone } from "react-icons/ti";
 
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  padding: 0 5px;
-  font-size: ${({ isSmall }) => (isSmall ? "12px" : "18px")};
-  margin-top: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:45px;
+  color: rgb(209, 216, 224);
+  padding: 0;
+  font-size: ${({ isSmall }) => (isSmall ? "12px" : "20px")};
+  transition: .2s;
+  :hover{
+    color: rgb(0, 212, 99);
+  }
 `
 export const FacebookIcon = arg => {
     return (
         <Wrapper {...arg}>
-            <FaFacebook />
+            <TiSocialFacebookCircular />
+        </Wrapper>
+    )
+}
+
+export const PhoneIcon = arg => {
+    return (
+        <Wrapper {...arg}>
+            <TiDevicePhone />
+        </Wrapper>
+    )
+}
+
+export const HomeIcon = arg => {
+    return (
+        <Wrapper {...arg}>
+            <TiLocationOutline />
+        </Wrapper>
+    )
+}
+
+
+export const MailIcon = arg => {
+    return (
+        <Wrapper {...arg}>
+            <TiMail />
         </Wrapper>
     )
 }
