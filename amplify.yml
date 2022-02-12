@@ -17,7 +17,7 @@ frontend:
         - node -v
         - npm run-script build
   artifacts:
-    baseDirectory: build
+    baseDirectory: public
     files:
       - "**/*"
     cache:
