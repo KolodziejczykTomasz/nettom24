@@ -1,5 +1,11 @@
 import React from 'react'
-import { TiSocialFacebookCircular, TiMail, TiLocationOutline, TiDevicePhone } from "react-icons/ti";
+import {
+    TiDevicePhone,
+    TiLocationOutline,
+    TiMail,
+    TiSocialFacebookCircular
+} from "react-icons/ti";
+import {GoMarkGithub} from "react-icons/go";
 
 import styled from "styled-components"
 
@@ -7,19 +13,20 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width:45px;
+  width: 45px;
   color: rgb(209, 216, 224);
   padding: 0;
-  font-size: ${({ isSmall }) => (isSmall ? "12px" : "20px")};
+  height: 18px;
   transition: .2s;
-  :hover{
+
+  :hover {
     color: rgb(0, 212, 99);
   }
 `
 export const FacebookIcon = arg => {
     return (
         <Wrapper {...arg}>
-            <TiSocialFacebookCircular />
+            <TiSocialFacebookCircular size={23}/>
         </Wrapper>
     )
 }
@@ -27,7 +34,7 @@ export const FacebookIcon = arg => {
 export const PhoneIcon = arg => {
     return (
         <Wrapper {...arg}>
-            <TiDevicePhone />
+            <TiDevicePhone size={23}/>
         </Wrapper>
     )
 }
@@ -35,7 +42,7 @@ export const PhoneIcon = arg => {
 export const HomeIcon = arg => {
     return (
         <Wrapper {...arg}>
-            <TiLocationOutline />
+            <TiLocationOutline size={20}/>
         </Wrapper>
     )
 }
@@ -44,7 +51,16 @@ export const HomeIcon = arg => {
 export const MailIcon = arg => {
     return (
         <Wrapper {...arg}>
-            <TiMail />
+            <TiMail size={25}/>
+        </Wrapper>
+    )
+}
+
+
+export const GithubIcon = arg => {
+    return (
+        <Wrapper {...arg}>
+            <GoMarkGithub size={18}/>
         </Wrapper>
     )
 }
