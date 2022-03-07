@@ -1,13 +1,14 @@
-import React from 'react';
-import { document } from 'browser-monads';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import { document } from "browser-monads";
+import styled, { keyframes } from "styled-components";
 import {
   FacebookIcon,
   GithubIcon,
   MailIcon,
-  PhoneIcon,
-} from '../components/icons';
-import Seo from '../components/seo';
+  PhoneIcon
+} from "components/icons";
+import Seo from "components/seo";
+
 
 const AppearAnimation = keyframes`
   from {
@@ -22,7 +23,6 @@ const SecondRow = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  font-family: ${({ theme }) => theme.font.family.montserrat};
   align-items: center;
   overflow: hidden;
 `;
@@ -30,7 +30,6 @@ const SecondRow = styled.div`
 const FirstRow = styled.div`
   display: flex;
   position: relative;
-  font-family: ${({ theme }) => theme.font.family.montserrat};
   justify-content: center;
   align-items: center;
   font-size: 2.6rem;
@@ -41,11 +40,12 @@ const FirstRow = styled.div`
     content: '';
     position: absolute;
     display: inline-block;
-    border: 2px solid rgb(209, 216, 224);
+    border-top: 3px solid rgb(209, 216, 224);
+    border-bottom: 3px solid rgb(209, 216, 224);
     color: rgb(209, 216, 224);
-    width: 22%;
-    height: 3rem;
-    right: -9px;
+    width: 124px;
+    height: 4rem;
+    left: 10px;
     transition: ease-in-out .4s;
   }
 
@@ -100,7 +100,10 @@ const Column = styled.div`
   cursor: pointer;
 
   :hover ${FirstRow}::after {
-    right: 9px;
+    left: 130px;
+    width: 42px;
+    border-top: 3px solid rgb(0, 212, 99);
+    border-bottom: 3px solid rgb(0, 212, 99);
   }
 
   :hover ${GreyText} {
@@ -116,7 +119,6 @@ const Dashboard = styled.div`
   position: absolute;
   left: 0;
   bottom: 20vh;
-  font-family: ${({ theme }) => theme.font.family.montserrat};
   animation: 0.3s ease-in-out 1 forwards ${AppearAnimation};
 `;
 const useClickOutside = (handler) => {
@@ -129,17 +131,21 @@ const useClickOutside = (handler) => {
       }
     };
 
-    document.addEventListener('mousedown', maybeHandler);
+    document.addEventListener("mousedown", maybeHandler);
 
     return () => {
-      document.removeEventListener('mousedown', maybeHandler);
+      document.removeEventListener("mousedown", maybeHandler);
     };
   });
 
   return domNode;
+
 };
 
-function IndexPage() {
+
+const IndexPage = () => {
+
+
   const [isPhone, setIsPhone] = React.useState(false);
   const [isMail, setIsMail] = React.useState(false);
 
@@ -156,6 +162,7 @@ function IndexPage() {
     setIsMail(false);
     setIsPhone(false);
   });
+
 
   return (
     <>
@@ -206,7 +213,6 @@ function IndexPage() {
           </SecondRow>
         </Column>
       </Wrapper>
-      {' '}
       <Dashboard ref={domNode}>
         <Content>
           {isPhone ? (
@@ -229,6 +235,6 @@ function IndexPage() {
       </Dashboard>
     </>
   );
-}
+};
 
 export default IndexPage;

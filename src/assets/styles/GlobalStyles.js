@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
@@ -18,5 +18,6 @@ export const GlobalStyles = createGlobalStyle`
     overflow-y: hidden;
     overflow-x: hidden;
     background-color: rgb(33, 42, 57);
+    font-family: ${({ theme }) => theme.font.family.montserrat};
   }
 `;

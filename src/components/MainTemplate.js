@@ -1,8 +1,10 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from 'assets/styles/GlobalStyles';
-import { theme } from 'assets/styles/theme';
+import React from "react";
+import { GlobalStyles } from "assets/styles/GlobalStyles";
+import { theme } from "assets/styles/theme";
+import favicon from "assets/images/favicon.ico";
+import Helmet from "react-helmet";
+import PropTypes from "prop-types";
+import styled, { ThemeProvider } from "styled-components";
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,8 +15,11 @@ const Wrapper = styled.div`
 export function MainTemplate({ children }) {
   return (
     <>
-      <GlobalStyles />
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <ThemeProvider theme={theme}>
+        <GlobalStyles />
         <Wrapper>
           {children}
         </Wrapper>
@@ -24,5 +29,5 @@ export function MainTemplate({ children }) {
 }
 
 MainTemplate.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
