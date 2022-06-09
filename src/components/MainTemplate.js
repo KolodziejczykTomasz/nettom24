@@ -1,7 +1,7 @@
 import React from "react";
 import { GlobalStyles } from "assets/styles/GlobalStyles";
 import { theme } from "assets/styles/theme";
-import favicon from "assets/images/favicon.ico";
+import favicon from "assets/images/icon.png";
 import Helmet from "react-helmet";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
@@ -20,14 +20,12 @@ export function MainTemplate({ children }) {
       </Helmet>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Wrapper>
-          {children}
-        </Wrapper>
+        <Wrapper>{children}</Wrapper>
       </ThemeProvider>
     </>
   );
 }
 
 MainTemplate.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

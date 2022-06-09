@@ -14,7 +14,7 @@ module.exports = {
     title: "NETTOM24",
     description: "Firma NETTOM24 zaprasza",
     author: "@nettom24",
-    siteUrl: "https://nettom24.com"
+    siteUrl: "https://nettom24.com",
   },
   plugins: [
     {
@@ -23,48 +23,30 @@ module.exports = {
         rulePaths: [gatsbyRequiredRules],
         stages: ["develop"],
         extensions: ["js", "jsx"],
-        exclude: ["node_modules", "bower_components", ".cache", "public"]
-      }
-    },
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/assets/images/gatsby-icon.png"
-      }
-    },
+        exclude: ["node_modules", "bower_components", ".cache", "public"],
+      },
+    },    
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "src/assets/images"
-      },
-      __key: "images"
-    },
-
+    "gatsby-plugin-sharp",  
     "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-plugin-styled-components`
+      resolve: `gatsby-plugin-styled-components`,
     },
     {
       resolve: "gatsby-plugin-root-import",
       options: {
         assets: path.join(__dirname, "src", "assets"),
-        components: path.join(__dirname, "src", "components")
-      }
+        components: path.join(__dirname, "src", "components"),
+      },
     },
     {
       resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: [
-          "montserrat\:300,500,700",
-          "cormorant garamond\:500"
-        ],
-        display: "swap"
-      }
-    }
-  ]
+        fonts: ["montserrat:300,500,700", "cormorant garamond:500"],
+        display: "swap",
+      },
+    },
+  ],
 };
