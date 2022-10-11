@@ -1,0 +1,136 @@
+*, *::before, *::after {
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: rgb(33, 42, 57);
+
+}
+
+@keyframes AppearAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: rgb(0, 212, 99);
+}
+
+.secondRow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.firstRow {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.firstRow::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    border-top: 3px solid rgb(209, 216, 224);
+    border-bottom: 3px solid rgb(209, 216, 224);
+    color: rgb(209, 216, 224);
+    width: 124px;
+    height: 4rem;
+    left: 0;
+    transition: ease-in-out .4s;
+}
+
+
+.firstRow:hover::after, .column:hover .firstRow::after{
+    left:120px;
+    width: 42px;
+    border-top: 3px solid rgb(0, 212, 99);
+    border-bottom: 3px solid rgb(0, 212, 99);
+}
+
+.firstRow:hover .greyText, .column:hover .greyText {
+    color: rgb(209, 216, 224);
+}
+
+
+.content {
+    display: grid;
+    margin: 100px 30px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+}
+
+.content div {
+    width: 100%;
+    color: rgb(209, 216, 224);
+    height: 100%;
+}
+
+.content a, a:visited, a:link {
+      color: rgb(209, 216, 224);
+      text-decoration: none;
+      transition: .2s;
+  }
+
+ a:hover {
+      color: rgb(0, 212, 99);
+      text-decoration: none;
+  }
+
+
+.greyText {
+    margin-left: 5px;
+    transition: ease-in-out .4s;
+}
+
+.column {
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.dashboard {
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 20vh;
+    animation: 0.3s ease-in-out 1 forwards AppearAnimation;
+}
