@@ -134,3 +134,11 @@ body {
     bottom: 20vh;
     animation: 0.3s ease-in-out 1 forwards AppearAnimation;
 }
+
+  .wrapperPhoneNumber {
+        display: none;
+      }
+
+      .wrapperEmail {
+        display: none;
+      }
