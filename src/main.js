@@ -7,7 +7,8 @@ import {
   faSquarePhone,
 } from "@fortawesome/free-solid-svg-icons";
 
-import App from './App.vue'
+import App from './views/Home.vue'
+import router from "./router";
 
 library.add(
   faSquareFacebook,
@@ -17,4 +18,7 @@ library.add(
 );
 
 
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
+createApp(App)
+  .use(router)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .mount("#app");
