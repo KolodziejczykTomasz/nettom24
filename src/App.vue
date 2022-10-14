@@ -26,8 +26,6 @@ export default {
     }
   },
 }
-
-
 </script>
 <template>
   <div class="wrapper" v-cloak>

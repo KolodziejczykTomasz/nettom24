@@ -6,10 +6,8 @@ import {
   faSquareEnvelope,
   faSquarePhone,
 } from "@fortawesome/free-solid-svg-icons";
+
 import App from './App.vue'
-
-import('./assets/css/main.css')
-
 
 library.add(
   faSquareFacebook,
