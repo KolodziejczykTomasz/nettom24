@@ -11,14 +11,14 @@ const routes = [
     component: Home,
   },
   {
-    path: "/not-found",
+    path: "/:patchMatch(.*)*",
     name: "PageNotFound",
     component: PageNotFound,
-  },
+  }, 
 ];
 
 const router = createRouter({
-  history: routerHistory,
+  history: routerHistory, 
   routes,
 });
 

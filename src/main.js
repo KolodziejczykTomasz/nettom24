@@ -7,7 +7,7 @@ import {
   faSquarePhone,
 } from "@fortawesome/free-solid-svg-icons";
 
-import App from './views/Home.vue'
+import App from './App.vue'
 import router from "./router";
 
 library.add(
