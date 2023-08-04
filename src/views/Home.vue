@@ -44,16 +44,17 @@ export default {
            @click="closingEmail()" class="iconSocial"/>
         </div>
         <div class="icon-wrapper">
-          <a href="https://www.facebook.com/KolodziejczykTomasz44" target="_blank" rel="noopener noreferrer"
-            tabIndex="-3">
-            <font-awesome-icon icon="fa-brands fa-square-facebook"  class="iconSocial"/>
+          <a href="https://www.instagram.com/nettom24com" target="_blank" rel="noopener noreferrer" tabIndex="-3">
+            <font-awesome-icon icon="fa-brands fa-square-instagram" class="iconSocial"/> 
           </a>
         </div>
         <div class="icon-wrapper">
-          <a href="https://github.com/KolodziejczykTomasz" target="_blank" rel="noopener noreferrer" tabIndex="-4">
-            <font-awesome-icon icon="fa-brands fa-square-github" class="iconSocial"/>
+          <a href="https://www.facebook.com/nettom24" target="_blank" rel="noopener noreferrer"
+            tabIndex="-4">
+            <font-awesome-icon icon="fa-brands fa-square-facebook"  class="iconSocial"/>
           </a>
         </div>
+        
       </div>
     </div>
   </div>
@@ -65,8 +66,8 @@ export default {
       </div>     
       <div class="wrapperEmail" :style="isEmailShow ? hoverStyle : null"
           >
-        <a href="mailto:tomaszkolodziejczyk@wp.pl" target="_blank" rel="noopener noreferrer">
-          tomaszkolodziejczyk@wp.pl
+        <a href="mailto:biuronettom24@gmail.com" target="_blank" rel="noopener noreferrer">
+          biuronettom24@gmail.com
         </a>
       </div>    
     </div>
