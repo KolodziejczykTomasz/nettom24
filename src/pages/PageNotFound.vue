@@ -1,26 +1,18 @@
+<script setup>
+import image from "../assets/images/icon.png";
+</script>
 <template>
     <div class="wrapper" v-cloak>
         <div>
-<img :src="image" />
+            <img :src="image" alt="Page not found" class="brand"/>
         </div>
         <div>Strona pod tym adresem nie istnieje</div>
-        <div>Zapraszamy do  <router-link to="/"> strony głównej</router-link></div>
-        
+        <div>Zapraszamy do  
+            <router-link to="/"> strony głównej</router-link>
+        </div>        
     </div>
 </template>
 
-
-<script>
-import image from "../assets/images/icon.png"
-export default {
-    name: "PageNotFound",   
-    data: function () {
-        return {
-            image: image
-        }
-    }
-}
-</script>
 <style scoped>
 .wrapper {
     display: flex;
@@ -29,8 +21,8 @@ export default {
 
 .wrapper div:first-of-type img{
     display: block;
-    width: 30px;
-    height: auto;
+    width: auto;
+    height: 55px;
     margin-bottom: 20px;
 }
 
@@ -43,4 +35,6 @@ export default {
 .wrapper div:nth-child(3) {
     font-size: 24px;
 }
+
+
 </style>

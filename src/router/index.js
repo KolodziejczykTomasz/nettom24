@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import PageNotFound from "../views/PageNotFound.vue";
+import Home from "../pages/Home.vue";
+import PageNotFound from "../pages/PageNotFound.vue";
 
-const routerHistory = createWebHistory();
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
 
-const routes = [
+routes: [
   {
     path: "/",
     name: "Home",
@@ -15,11 +16,7 @@ const routes = [
     name: "PageNotFound",
     component: PageNotFound,
   }, 
-];
+]
 
-const router = createRouter({
-  history: routerHistory, 
-  routes,
 });
-
 export default router;

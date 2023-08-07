@@ -18,8 +18,7 @@ body {
     overflow-x: hidden;
     background-color: rgb(33, 42, 57);
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-kerning: auto;
-
+    font-kerning: auto; 
 }
 
 @keyframes AppearAnimation {
@@ -146,13 +145,6 @@ body {
     animation: 0.3s ease-in-out 1 forwards AppearAnimation;
 }
 
-  .wrapperPhoneNumber {
-    display: none;
-  }
-
-  .wrapperEmail {
-    display: none;
-  }
 
 .hoverGrayColor:hover {
     color: rgb(209, 216, 224);
