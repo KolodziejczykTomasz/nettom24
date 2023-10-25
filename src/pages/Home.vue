@@ -54,11 +54,11 @@ const closingEmail = () =>{
   <div class="dashboard" >
     <div class="content" >   
       <div :class="[{ wrapperPhoneNumber: !isPhoneShow }, hoverStyle]" >
-        <a href="tel: +48.512893100"> +48.512893100</a>
+        <a href="tel: +48.512893100"> +48.455444100</a>
       </div>     
       <div :class="[{ wrapperEmail: !isEmailShow }, hoverStyle]" >
-        <a href="mailto:biuronettom24@gmail.com" target="_blank" rel="noopener noreferrer">
-          biuronettom24@gmail.com
+        <a href="mailto:biuro@nettom24.com" target="_blank" rel="noopener noreferrer">
+          biuro@nettom24.com
         </a>
       </div>    
     </div>
