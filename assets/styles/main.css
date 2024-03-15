@@ -20,6 +20,7 @@ html {
     background: var(--color-background);
     overflow: hidden; 
 }
+
 button {
     cursor: pointer;
 }
@@ -195,12 +196,14 @@ header {
     height: auto;      
 }
 #about div:nth-child(1) .section__img {
-    background: url("../images/logo.png")  center center no-repeat;
-    background-size: 250px 250px;   
+    height: 350px;
+    width: 350px;
+    background: url("../images/laptop.svg")  center center no-repeat;
+    background-size: cover;   
 }
 .service .section__img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;  
 }
 .section__content {
@@ -288,7 +291,6 @@ header {
     text-transform: uppercase;
     z-index: 1;
 }
-
 .service .section__content--btn:hover .content__btn--underline {
     opacity: 1;
 }
@@ -300,8 +302,7 @@ header {
     height: 100px;
     background: url('../images/pattern-circle.svg') no-repeat;
     background-size: contain;
-    opacity: .2;
-    
+    opacity: .2;    
 }
 .service .section__img {
     display: flex;
@@ -341,8 +342,7 @@ header {
     width: 100%;
     min-height: 710px;
     height: auto; 
-    background: linear-gradient(180deg, #121212 1.73%, #1111 98.27%);
-    
+    background: linear-gradient(180deg, #121212 1.73%, #1111 98.27%);    
 }
 .works__pagination div {
     width: 15px;
@@ -354,7 +354,6 @@ header {
     width: 100%;
     min-height: 950px;
 }
-
 .works__slider {
     display: flex;   
     flex-direction: column;
@@ -365,9 +364,82 @@ header {
     margin: auto auto 0 auto;
 }
 .project__item {
-    width: 100%;
-    height: 400px;
+    width: 370px;
+    min-height: 400px;
+    height: auto;
     margin: 20px 0;
+}
+.slider-content div:nth-child(1) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr1.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(1) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr2.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(2) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr3.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(2) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr4.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(3) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr5.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(3) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr6.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(4) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr7.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(4) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr8.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(5) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr9.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(5) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr10.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(6) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr11.png') center center no-repeat;
+    background-size:contain;        
+}
+.slider-content div:nth-child(6) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 400px;
+    background: url('../images/works/projektNr12.png') center center no-repeat;
+    background-size:contain;        
 }
 .section__headline--blog {
     margin-left: 25px;
@@ -381,7 +453,6 @@ header {
     height: 72px; 
     background: url('../images/leftArrow.svg') no-repeat;
     background-size:cover; 
-
 }
 .works__arrow--right {
     display: none;   
@@ -407,15 +478,13 @@ header {
     background-repeat: no-repeat;
     border-radius: 100%;
 }
-
 #carouselWorks .carousel-control-prev {
-    left: 128px;
+    left: 28px;
     top: calc(50% - 36px);  
 }
-
 #carouselWorks .carousel-control-next {
     top: calc(50% - 36px);
-    right: 127px;
+    right: 27px;
 }
 #carouselWorks .carousel-indicators {    
     bottom: -20px;
@@ -489,7 +558,6 @@ footer {
     background: url('../images/pattern-rings.svg') no-repeat;
     background-size: cover;
 }
-
 .contact__footer .brand {  
     height: 40px;
     width: 200px;
@@ -758,18 +826,18 @@ form .button__primary span {
     text-wrap: nowrap;
 }
 .project__img {
-    width: 343px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     flex-shrink: 0;
     cursor: pointer;
     transition: .2s;
-    border: 1px solid red;
     margin: 0 auto;
 }
-.projects__list div:nth-child(1) .project__img {
-    background: url('../../img/p.portfolio/thumbnail-project-1-small.webp') no-repeat;
-    background-size: cover;
-    
+.projects__list div:nth-child(1) .project__img {    
+    width: 370px;
+    height: 300px;
+    background: url('../images/works/projektNr12.png') center center no-repeat;
+    background-size:contain;    
 }
 .project__details {
     width: 100%;
@@ -777,7 +845,8 @@ form .button__primary span {
     flex-shrink: 0;
 }
 .project__name {
-    height: 32px;
+    min-height: 32px;
+    height: auto;
     color: var(--White, #FFF);
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: "SpaceGrotesk-Bold", sans-serif;
@@ -811,8 +880,20 @@ form .button__primary span {
     margin-top: 0;
     width: auto;
 }
-
-
+.hide-phone-number {
+    display: inline-block; 
+    position: relative;
+    cursor: pointer;   
+}  
+.hide-phone-number::after {
+    content: "XX-XXXX";
+    background: #111111;
+    position: absolute;
+    right: 0; 
+}
+.hide-phone-number:hover::after{
+    content: "";
+}
 
 @media(min-width: 768px) {
     .layout {
@@ -887,10 +968,18 @@ form .button__primary span {
         min-height: unset;
         height: auto;
     }
+    #about {
+        padding: 140px 0 0 0; 
+    }
+    #about div:nth-child(1) .section__img {
+        height: 480px;
+        width: 480px;
+        background: url("../images/laptop.svg")  center center no-repeat;
+        background-size: cover;   
+    }
     #about div:nth-child(1) .section__content--list,  #about div:nth-child(1) .section__content--title {
         text-align: right;
     }
-
     .section__content--title {
         text-align: left;
         margin-bottom: 60px;
@@ -904,16 +993,99 @@ form .button__primary span {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 768px;
+        width:100%;
     }
+    .project__img {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: .2s; 
+        margin: 0 auto;
+    }
+  
     .project__item {
         width: 550px;
-        height: 550px;
+        min-height: 450px;
+        height: auto;
+    }
+    .slider-content div:nth-child(1) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr1.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(1) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr2.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(2) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr3.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(2) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr4.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(3) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr5.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(3) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr6.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(4) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr7.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(4) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr8.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(5) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr9.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(5) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr10.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(6) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr11.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(6) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 340px;
+        height: 340px;
+        background: url('../images/works/projektNr12.png') center center no-repeat;
+        background-size:contain;        
     }
     footer {
         height: auto;
         flex-shrink: 0;
         padding-bottom: 40px;
+        padding-top: 100px;
     }
     .contact {
         width: 768px;
@@ -957,8 +1129,7 @@ form .button__primary span {
         height: auto;
         flex-shrink: 0;
         margin-bottom: 40px;
-   }
- 
+   } 
     input[type="text"], input[type="email"] {
         width: 600px;
         height: 43px;
@@ -1002,6 +1173,7 @@ form .button__primary span {
         min-height: 500px;
         height: auto;
     }
+    
     .projects__list {
         display: flex;
         flex-wrap: wrap;
@@ -1123,14 +1295,28 @@ form .button__primary span {
         width: 720px;
         padding: 40px 0;  
     } 
-    .section__img {
+    #about div:nth-child(1)  .section__content {
+        align-items: flex-start;
+        justify-content: flex-start;
         width: 720px;
+        padding: 40px 0 40px 140px;  
+    } 
+    .section__img {
+        width:680px; 
     }
     #about div:nth-child(1) .section__img {
-        width: 720px;
-    }
+        margin: 0 auto 0 -60px;
+        width:680px; 
+    }  
     .service .section__img {
-        width: 720px;   
+        width:720px;   
+    }
+    .service .section__img svg {
+        height: 400px; 
+        width:600px;        margin: 0 0 0 auto;
+    }
+    #about {
+        padding: 160px 0 70px 0; 
     }
     #about div:nth-child(3) {
         flex-direction: row-reverse;
@@ -1146,8 +1332,7 @@ form .button__primary span {
         height: 100px;
         background: url('../images/pattern-circle.svg') no-repeat;
         background-size: contain;
-        opacity: .2;
-        
+        opacity: .2;        
     }
     #about div:nth-child(1) .section__content--list,  #about div:nth-child(1) .section__content--title {
         text-align: left;
@@ -1160,14 +1345,86 @@ form .button__primary span {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        column-gap: 22px;
+        column-gap: 100px;
         row-gap: 60px;
     }
+    .slider-content div:nth-child(1) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr1.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(1) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr2.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(2) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr3.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(2) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr4.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(3) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr5.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(3) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr6.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(4) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr7.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(4) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr8.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(5) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr9.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(5) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr10.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(6) .projects__list div:nth-child(1) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr11.png') center center no-repeat;
+        background-size:contain;        
+    }
+    .slider-content div:nth-child(6) .projects__list div:nth-child(2) div:nth-child(1) .project__img {    
+        width: 530px;
+        height: 530px;
+        background: url('../images/works/projektNr12.png') center center no-repeat;
+        background-size:contain;        
+    }
+    
     .project__item {
-        width: 342px;
-        height: 398px;
-        flex-shrink: 0;
-        margin-bottom: 0;
+        width: 530px;
+        min-height: 450px;
+        height: auto;
     }
     .project__details {
         height: 67px;
@@ -1203,7 +1460,7 @@ form .button__primary span {
     footer {
         min-height: 674px;
         height: auto;
-        padding-top: 84px;
+        padding-top: 160px;
         padding-bottom: 0;
     }
     .contact {
