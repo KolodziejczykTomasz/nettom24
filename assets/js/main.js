@@ -189,5 +189,120 @@
         mirror: false
       });
     });
+
+
+
+    const form = document.querySelector('form');
+
+    const name = document.querySelector('#name');
+    const emn = document.querySelector('.error-message-name');
+    const ign = document.querySelector('.ign');
+    
+    const email = document.getElementById("email");
+    const eme = document.querySelector('.error-message-email');
+    const ige = document.querySelector('.ige');
+    
+    const message = document.querySelector('#message');
+    const emm = document.querySelector('.error-message-message');
+    const igm = document.querySelector('.igm');
+    
+    
+    
+    
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        validationInputs();
+    });
+    const validationInputs = () => {
+        validationInputsName();
+        validationInputsEmail();
+        validationInputsMessage();
+    
+    }
+    const validationInputsName = (e) => {
+        const nameValue = name.value.trim();
+        const validName=/^[A-Za-z]+$/;
+        if(nameValue==="")
+        {
+            ign.classList.add('error');
+            emn.innerHTML = "Pole obiwązkowe";
+        }else if(!validName.test(nameValue)){
+            ign.classList.add('error');
+            emn.innerHTML = "Przepraszam, błędny format";
+        }else{
+            ign.classList.remove('error');
+            emn.innerHTML = "";
+            return true;
+        }
+    }
+    
+    name.oninput=function(){
+        validationInputsName();
+    }
+    const validationInputsEmail = (e) => {
+        const email = document.getElementById("email");
+        const reg = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        const result = reg.test(email.value);
+    
+        if ((email !== null) && (email.value === "")) {
+            ige.classList.add('error');
+            eme.innerHTML = "Pole obiwązkowe";
+            return false
+        } else if (result === false) {
+            ige.classList.add('error');
+            eme.innerHTML = "Przepraszam, błędny format";
+            return false;
+        }
+        ige.classList.remove('error');
+        eme.innerHTML = "";
+        return true;
+    }
+    email.oninput=function(){
+        validationInputsEmail();
+    }
+    const validationInputsMessage = (e) => {
+        const messageValue = message.value.trim();
+        if(messageValue==="")
+        {
+            igm.classList.add('error');
+            emm.innerHTML = "Pole obiwązkowe"; 
+			}else {
+            igm.classList.remove('error');
+            emm.innerHTML = "";
+            return true;
+        }
+    }
+    
+    message.oninput=function(){
+        validationInputsMessage();
+    }
+    
+	const btn__submit = document.getElementById('btn__submit');
+	
+	
+	const sendMail= ()=> {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_fxafsic";
+  const templateID = "template_0za1kpa";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Wiadomość została wysłana!!!")
+
+    })
+    .catch(err=>console.log(err));
+
+}
+	
+btn__submit.addEventListener("click", sendMail);	
   
   })()

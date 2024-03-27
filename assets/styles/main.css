@@ -164,6 +164,9 @@ header {
     font-weight: 400;
     line-height: 28px;
 }
+ .hero__content--desc span {
+        display: block;
+    }
 #about {
     display: flex;
     justify-items: center;
@@ -198,7 +201,7 @@ header {
 #about div:nth-child(1) .section__img {
     height: 350px;
     width: 350px;
-    background: url("../images/laptop.svg")  center center no-repeat;
+    background: url("../images/logo_monitor.png")  center center no-repeat;
     background-size: cover;   
 }
 .service .section__img {
@@ -312,13 +315,11 @@ header {
     height: 400px;
 
 }
-.service .section__img svg{
+#about div:nth-child(3) .section__img {
     width: 400px;
     height: 400px;
-    flex-shrink: 0; 
-}
-.service .section__img svg path {
-    fill: var(--color-primary);
+    background: url("../images/dron.png")  center center no-repeat;
+    background-size: contain;   
 }
 .service .content__btn--underline {
     margin-top: -10px;
@@ -723,8 +724,8 @@ form .button__primary span {
     display: none;
 }
 .error input,
-.error textarea{
-    background: url('../images/Group 20__error.svg') bottom 18px right 0 no-repeat;
+.error textarea{   
+    background: url('../images/Group\ 20__error.svg') bottom 18px right 0 no-repeat;
 }
 .input-group {
     position: relative;
@@ -937,7 +938,7 @@ form .button__primary span {
         line-height: 65px;
     }
     .hero__content--desc {
-        font-family: "SpaceGrotesk", sans-serif;
+        font-family: "Outfit", sans-serif;
         font-weight: 600;
         margin-top: 48px;
         width: 280px;
@@ -945,6 +946,9 @@ form .button__primary span {
         margin-top: 32px;
         width: 300px;
         margin-left: 40px;
+    }
+    .hero__content--desc span {
+        display: block;
     }
     .hero__content .button__primary {
         margin: 48px auto 0 40px;
@@ -974,8 +978,14 @@ form .button__primary span {
     #about div:nth-child(1) .section__img {
         height: 480px;
         width: 480px;
-        background: url("../images/laptop.svg")  center center no-repeat;
+        background: url("../images/logo_monitor.png")  center center no-repeat;
         background-size: cover;   
+    }
+    #about div:nth-child(3) .section__img {
+        height:550px;
+        width: 500px;
+        background: url("../images/dron.png")  center center no-repeat;
+        background-size:contain;    
     }
     #about div:nth-child(1) .section__content--list,  #about div:nth-child(1) .section__content--title {
         text-align: right;
@@ -1272,6 +1282,9 @@ form .button__primary span {
         font-weight: 900;
         line-height: 88px;
     }
+    .hero__content--desc span {
+        display: block;
+    }
     .hero__content--desc {
         margin-top: 0;
         width: 350px;
@@ -1301,6 +1314,7 @@ form .button__primary span {
         width: 720px;
         padding: 40px 0 40px 140px;  
     } 
+
     .section__img {
         width:680px; 
     }
@@ -1310,10 +1324,13 @@ form .button__primary span {
     }  
     .service .section__img {
         width:720px;   
-    }
-    .service .section__img svg {
-        height: 400px; 
-        width:600px;        margin: 0 0 0 auto;
+    }   
+    #about div:nth-child(3) .section__img {
+        height: 500px; 
+        width: 600px;        
+        margin: 0 0 0 auto;
+        background: url("../images/dron.png")  center center no-repeat;
+        background-size: contain;   
     }
     #about {
         padding: 160px 0 70px 0; 
