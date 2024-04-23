@@ -1,0 +1,1 @@
+User-agent: *Allow: /Allow: /Sitemap: https://nettom24.com/sitemap.xml

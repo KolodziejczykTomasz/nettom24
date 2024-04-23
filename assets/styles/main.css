@@ -1544,3 +1544,25 @@ form .button__primary span {
     }
  
 }
+#pageNotFound {
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #D9D9D9;
+}
+
+#pageNotFound p {
+    margin-top: 120px;
+    display: block;
+}
+#pageNotFound a {
+    color: #4EE1A0;
+    transition: .2s;
+}
+
+#pageNotFound a:hover {
+    color: #D9D9D9;
+}
